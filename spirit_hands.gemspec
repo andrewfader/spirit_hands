@@ -23,18 +23,18 @@ Gem::Specification.new do |gem|
 
   # Dependencies
   gem.required_ruby_version = '>= 2.0'
-  gem.add_runtime_dependency 'pry', '~> 0.10'
-  gem.add_runtime_dependency 'pry-rails', '~> 0.3'
-  gem.add_runtime_dependency 'pry-doc', '~> 0.8'
+  gem.add_runtime_dependency 'pry'
+  gem.add_runtime_dependency 'pry-rails'
+  gem.add_runtime_dependency 'pry-doc'
   if RUBY_PLATFORM == 'java'
     gem.platform = 'java'
-    gem.add_runtime_dependency 'pry-nav', '~> 0.2.4'
+    gem.add_runtime_dependency 'pry-nav'
   else
-    gem.add_runtime_dependency 'pry-byebug', '~> 3.4.0', '>= 3.4.0'
+    gem.add_runtime_dependency 'pry-byebug'
   end
-  gem.add_runtime_dependency 'hirb', '~> 0.7'
-  gem.add_runtime_dependency 'hirb-unicode-steakknife', '~> 0.0'
-  gem.add_runtime_dependency 'pry-coolline', '~> 0.2'
-  gem.add_runtime_dependency 'awesome_print', '~> 1.6'
+  gem.add_runtime_dependency 'hirb'
+  gem.add_runtime_dependency 'hirb-unicode-steakknife'
+  gem.add_runtime_dependency 'pry-coolline'
+  gem.add_runtime_dependency 'awesome_print'
 end
 .tap {|gem| pk = File.expand_path(File.join('~/.keys', 'gem-private_key.pem')); gem.signing_key = pk if File.exist? pk; gem.cert_chain = ['gem-public_cert.pem']} # pressed firmly by waxseal
